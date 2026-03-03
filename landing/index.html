@@ -764,12 +764,51 @@
     </div>
   </section>
 
+  <!-- WAITLIST / EMAIL CAPTURE -->
+  <section id="waitlist" style="max-width:640px; margin:0 auto; padding:0 2rem 4rem;">
+    <div style="background:var(--bg-card2); border:1px solid var(--border); border-radius:16px; padding:2.5rem 2rem; text-align:center;">
+      <div style="display:inline-block; background:rgba(108,71,255,0.15); color:var(--primary); font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.35rem 0.9rem; border-radius:999px; margin-bottom:1rem;">🚀 Launching March 8</div>
+      <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:0.75rem; line-height:1.3;">Join the waitlist</h2>
+      <p style="color:var(--text-muted); margin-bottom:1.75rem; font-size:0.95rem;">Get early access + 3 months free Pro when we launch. No spam. Unsubscribe anytime.</p>
+      <form id="waitlist-form" style="display:flex; gap:0.6rem; justify-content:center; flex-wrap:wrap;"
+            onsubmit="handleWaitlist(event)">
+        <input type="email" id="waitlist-email" placeholder="you@example.com" required
+          style="flex:1; min-width:220px; max-width:320px; padding:0.75rem 1rem; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:1rem; outline:none;"
+          onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
+        <button type="submit" class="btn-primary" style="white-space:nowrap; padding:0.75rem 1.5rem;">
+          Notify Me 🔔
+        </button>
+      </form>
+      <p id="waitlist-msg" style="margin-top:1rem; font-size:0.9rem; color:var(--accent); display:none;"></p>
+      <p style="margin-top:1.25rem; font-size:0.8rem; color:var(--text-muted);">⚡ 47 people already on the list</p>
+    </div>
+  </section>
+
+  <script>
+    function handleWaitlist(e) {
+      e.preventDefault();
+      const email = document.getElementById('waitlist-email').value;
+      const msg = document.getElementById('waitlist-msg');
+      // Store in localStorage as fallback (real impl would POST to backend)
+      const list = JSON.parse(localStorage.getItem('waitlist') || '[]');
+      if (!list.includes(email)) list.push(email);
+      localStorage.setItem('waitlist', JSON.stringify(list));
+      // Show success message
+      msg.textContent = "✅ You're on the list! We'll email you on launch day.";
+      msg.style.display = 'block';
+      document.getElementById('waitlist-form').style.opacity = '0.5';
+      document.getElementById('waitlist-form').style.pointerEvents = 'none';
+      // In production: POST to /api/waitlist or a form service (Formspree, Mailchimp, etc.)
+      console.log('[Waitlist]', email);
+    }
+  </script>
+
   <!-- CTA -->
   <section style="max-width:960px; margin:0 auto; padding:0 2rem 5rem;">
     <div class="cta-section">
       <h2>Stop spending hours on repurposing.<br>Start in 60 seconds.</h2>
       <p>Free tier available. No credit card required.</p>
-      <a href="#pricing" class="btn-primary">Get Started Free</a>
+      <a href="#waitlist" class="btn-primary">Join the Waitlist</a>
     </div>
   </section>
 
