@@ -773,7 +773,10 @@
       <p style="color:var(--text-muted); margin-bottom:1.75rem; font-size:0.95rem;">Get early access + 3 months free Pro when we launch. No spam. Unsubscribe anytime.</p>
       <form id="waitlist-form" style="display:flex; gap:0.6rem; justify-content:center; flex-wrap:wrap;"
             onsubmit="handleWaitlist(event)">
-        <input type="email" id="waitlist-email" placeholder="you@example.com" required
+        <input type="hidden" name="_subject" value="New Content Repurposer Waitlist Signup 🚀">
+        <input type="hidden" name="_replyto" value="">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="email" id="waitlist-email" name="email" placeholder="you@example.com" required
           style="flex:1; min-width:220px; max-width:320px; padding:0.75rem 1rem; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:1rem; outline:none;"
           onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
         <button type="submit" class="btn-primary" style="white-space:nowrap; padding:0.75rem 1.5rem;">
@@ -786,21 +789,42 @@
   </section>
 
   <script>
-    function handleWaitlist(e) {
+    const WAITLIST_API = 'https://content-repurposer-waitlist.qlgl.workers.dev';
+
+    async function handleWaitlist(e) {
       e.preventDefault();
       const email = document.getElementById('waitlist-email').value;
       const msg = document.getElementById('waitlist-msg');
-      // Store in localStorage as fallback (real impl would POST to backend)
-      const list = JSON.parse(localStorage.getItem('waitlist') || '[]');
-      if (!list.includes(email)) list.push(email);
-      localStorage.setItem('waitlist', JSON.stringify(list));
-      // Show success message
-      msg.textContent = "✅ You're on the list! We'll email you on launch day.";
+      const form = document.getElementById('waitlist-form');
+
+      msg.textContent = '⏳ Joining...';
+      msg.style.color = 'var(--text-muted)';
       msg.style.display = 'block';
-      document.getElementById('waitlist-form').style.opacity = '0.5';
-      document.getElementById('waitlist-form').style.pointerEvents = 'none';
-      // In production: POST to /api/waitlist or a form service (Formspree, Mailchimp, etc.)
-      console.log('[Waitlist]', email);
+      form.style.opacity = '0.7';
+      form.style.pointerEvents = 'none';
+
+      try {
+        const res = await fetch(WAITLIST_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          msg.textContent = "✅ You're on the list! We'll email you on launch day.";
+          msg.style.color = 'var(--accent)';
+        } else {
+          throw new Error(data.error || 'Unknown error');
+        }
+      } catch (err) {
+        // Fallback: localStorage (offline/network error)
+        const list = JSON.parse(localStorage.getItem('waitlist') || '[]');
+        if (!list.includes(email)) list.push(email);
+        localStorage.setItem('waitlist', JSON.stringify(list));
+        msg.textContent = "✅ You're on the list! We'll email you on launch day.";
+        msg.style.color = 'var(--accent)';
+        console.warn('[Waitlist fallback]', err.message);
+      }
     }
   </script>
 
