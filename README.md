@@ -91,33 +91,73 @@ content-repurposer technical-post.md --tone professional
 
 ---
 
-## 📊 Output Example
+## ⚡ Live Demo
 
-Input: A 1,200-word blog post about "5 Things I Learned Building a SaaS"
+```bash
+$ content-repurposer blog-post.md --formats all
 
-**Twitter Thread output:**
+🔄 Content Repurposer v1.0.0
+
+📄 Reading: blog-post.md
+✅ Parsed: 1,886 characters
+
+🎯 Generating 5 formats: twitter, linkedin, newsletter, tiktok, facebook
+   Tone: professional | Quality threshold: 7/10 | Model: gemini-flash
+
+  → Generating twitter...
+  → Generating linkedin...
+  → Generating newsletter...
+  → Generating tiktok...
+  → Generating facebook...
+
+✅ Generated 5 formats in 63.8s
+
+🎉 Done! Outputs saved to: ./repurposed/
+
+Format summary:
+  • twitter:     2730 chars  (quality: 9/10)  ✓
+  • linkedin:    3059 chars  (quality: 10/10) ✓
+  • newsletter:  2745 chars  (quality: 10/10) ✓
+  • tiktok:      3094 chars  (quality: 9/10)  ✓
+  • facebook:    1605 chars  (quality: 10/10) ✓
+
+Average quality: 9.6/10
 ```
-Tweet 1/12
-I've been building SaaS products for 3 years.
-
-Here are 5 lessons that would have saved me 6 months:
-
-🧵 Thread
 
 ---
 
-Tweet 2/12
-1/ Distribution > Product
+## 📊 Output Examples
 
-I spent 4 months perfecting features nobody asked for.
+Input: A blog post about building a content repurposing tool (~1,900 chars)
 
-The moment I posted on HN? 200 users in 48 hours.
+**🐦 Twitter Thread (9/10):**
+```
+1/ I was spending 4-5 hours every week doing the same thing: rewriting blog
+posts for Twitter, LinkedIn, and newsletters.
 
-Build the audience FIRST, then the product.
-...
+It felt like work that shouldn't exist. So, I set out to build a solution.
+
+2/ The content was identical in substance, yet each platform demanded different
+formats, tones, and lengths. This repetitive task was a massive drain on my time.
+
+3/ Most "content repurposing" tools promise 100 pieces from 1.
+But quantity often sacrifices quality.
+5 great posts will always outperform 100 mediocre ones.
+
+...14 tweets total | see repurposed/twitter.txt
 ```
 
-**Quality Score:** 9.8/10 ✅
+**💼 LinkedIn Post (10/10):**
+```
+Are you caught in the content repurposing trap, spending hours each week
+reformatting the same core ideas for different platforms?
+
+...Thought leadership format, 3,059 chars | see repurposed/linkedin.txt
+```
+
+**📧 Newsletter (10/10), 🎵 TikTok Script (9/10), 👥 Facebook (10/10)** — all in `repurposed/`
+
+**Quality Score: 9.6/10 average** ✅
 
 ---
 

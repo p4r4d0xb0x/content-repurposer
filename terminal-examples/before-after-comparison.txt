@@ -1,0 +1,36 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                CONTENT REPURPOSER — BEFORE / AFTER                      ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  INPUT (1 blog post, ~2 min to write)                                   ║
+║  ─────────────────────────────────────                                   ║
+║  blog-post.md                                                            ║
+║  "I Built a Content Repurposing Tool in 7 Days..."                      ║
+║  1,886 characters                                                        ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  OUTPUT (5 platform-ready posts in 63.8 seconds)                        ║
+║  ─────────────────────────────────────────────────                       ║
+║                                                                          ║
+║  🐦  twitter.txt      2,730 chars   quality: 9/10  ✓                   ║
+║      14-tweet thread, hooks, CTAs                                        ║
+║                                                                          ║
+║  💼  linkedin.txt     3,059 chars   quality: 10/10 ✓                   ║
+║      Thought leadership, professional tone                               ║
+║                                                                          ║
+║  📧  newsletter.txt   2,745 chars   quality: 10/10 ✓                   ║
+║      Scannable format, expanded depth                                    ║
+║                                                                          ║
+║  🎵  tiktok.txt       3,094 chars   quality: 9/10  ✓                   ║
+║      60-90s video script, hook + story                                   ║
+║                                                                          ║
+║  👥  facebook.txt     1,605 chars   quality: 10/10 ✓                   ║
+║      Casual tone, engagement-optimized                                   ║
+║                                                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  BEFORE: 4-5 hours/week manual work                                     ║
+║  AFTER:  63.8 seconds  |  9.6/10 avg quality  |  $0.003/run            ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝

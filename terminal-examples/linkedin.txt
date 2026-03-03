@@ -1,0 +1,22 @@
+# Content Repurposer Output
+Format: linkedin
+Quality Score: 10/10
+Tone: professional
+Model: gemini-2.5-flash
+Generated: 2026-03-03T13:36:13.915Z
+
+---
+
+Are you caught in the content repurposing trap, spending hours each week reformatting the same core ideas for different platforms? For too long, I found myself in this exact cycle, dedicating 4-5 hours every single week to rewriting blog posts into Twitter threads, LinkedIn updates, and newsletter snippets. The content was inherently the same, but the manual effort required to adapt its format, tone, and length for each channel felt like inefficient work that simply shouldn't exist in our modern toolkit.
+
+The prevailing wisdom around "content repurposing" often falls short, with many tools promising to generate 100 pieces of content from one – a classic case of quantity over quality. We all know that 100 mediocre posts won't genuinely grow an audience; five truly great ones will. Quality-focused solutions, on the other hand, frequently come with enterprise-level price tags and a host of features most individual creators or small teams simply don't need. This glaring gap fueled my resolve to build a better way, a solution that prioritizes impact without demanding an exorbitant investment in time or money.
+
+My answer to this challenge is **Content Repurposer**, a powerful CLI tool I developed in just seven days. It's designed to transform a single blog post into five platform-perfect outputs, each meticulously crafted for its intended audience and format. Imagine a conversational Twitter thread with clear hooks and calls-to-action, a thought-leadership LinkedIn post (like this one), an expanded yet scannable newsletter section, a dynamic 60-90 second TikTok/Reels script, and an engagement-optimized Facebook post – all generated in an average of 54 seconds, consistently achieving a quality score of 9.8/10.
+
+The core of Content Repurposer lies in its quality-first philosophy. Every generated output is automatically quality-scored by AI on a scale of 1-10. Any output falling below a 7 is automatically retried, guaranteeing that only high-caliber content makes it through. I put this system through rigorous testing with edge cases that would typically break lesser tools: from concise 293-character tips to intricate 764-character code tutorials and expansive 2,084-character list posts. The result? A 100% success rate with zero retries needed in production, proving its robust ability to adapt intelligently.
+
+Getting started is straightforward: a simple command, `content-repurpose 'path/to/blog-post.md'`, is all it takes. Sixty seconds later, you have five platform-ready posts at your fingertips. We offer a generous free tier, allowing for 5 repurposings per month using Gemini's free API quota – no credit card required. For unlimited access, the Pro plan is available at just $29/month. While we're actively building the web UI, the CLI ships first, embodying our commitment to shipping fast and iterating based on real user feedback.
+
+What challenges do you currently face in maintaining content quality and consistency across all your channels?
+
+#ContentStrategy #ContentMarketing #DeveloperTools #AItools #Productivity

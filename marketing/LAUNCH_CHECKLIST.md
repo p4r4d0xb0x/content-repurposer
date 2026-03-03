@@ -29,7 +29,12 @@
 - [x] LAUNCH_RUNBOOK.md
 - [x] Hotteok blog post about launch
 - [x] DEVTO_LAUNCH_ARTICLE.md ← NEW (D-5)
-- [x] terminal-examples/cli-output-all-formats.txt ← NEW (D-5, real run: 54.5s, 9.6/10 avg)
+- [x] terminal-examples/ 디렉토리 생성 ← DONE (D-5 22:30 KST)
+  - cli-session-demo.txt (실제 CLI 출력, 63.8s, 9.6/10)
+  - before-after-comparison.txt (비교 다이어그램)
+  - 실제 5개 포맷 출력물 (twitter/linkedin/newsletter/tiktok/facebook.txt)
+  - 입력: demo-content-repurposer.md (Content Repurposer 소개 포스트)
+- [x] README.md ⚡ Live Demo 섹션 + 실제 출력 예시 추가 ← NEW (D-5 22:30 KST)
 
 ### Infrastructure
 - [x] waitlist-worker/ — Cloudflare Worker for email collection ← NEW (D-5)

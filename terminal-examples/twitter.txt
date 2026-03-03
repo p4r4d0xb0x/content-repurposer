@@ -1,0 +1,57 @@
+# Content Repurposer Output
+Format: twitter
+Quality Score: 9/10
+Tone: professional
+Model: gemini-2.5-flash
+Generated: 2026-03-03T13:36:13.914Z
+
+---
+
+1/ I was spending 4-5 hours every week doing the same thing: rewriting blog posts for Twitter, LinkedIn, and newsletters.
+
+It felt like work that shouldn't exist. So, I set out to build a solution.
+
+2/ The content was identical in substance, yet each platform demanded different formats, tones, and lengths. This repetitive task was a massive drain on my time as a content creator.
+
+3/ Most "content repurposing" tools promise 100 pieces from 1. But quantity often sacrifices quality. 5 great posts will always outperform 100 mediocre ones.
+
+4/ And the quality-focused tools? Often $119/month for enterprise features I didn't need. There had to be a better way to achieve platform-perfect outputs without compromising quality or budget.
+
+5/ Introducing **Content Repurposer**: a CLI tool I built to transform one blog post into five distinct, high-quality pieces of content, optimized for specific platforms.
+
+6/ It generates:
+- A conversational Twitter thread with hooks.
+- A thought leadership LinkedIn post (300-500 words).
+- An expanded, scannable newsletter section.
+- A 60-90 second TikTok/Reels script.
+- A casual, engagement-optimized Facebook post.
+
+7/ The results speak for themselves:
+Average time per repurposing: 54 seconds.
+Average AI quality score: 9.8/10.
+It's about precision and speed, delivering truly platform-perfect content.
+
+8/ My core philosophy is Quality-First. Every output is quality-scored 1-10 by the AI. Anything below a 7 triggers an auto-retry. This ensures you never receive subpar or unusable content.
+
+9/ I rigorously tested it against diverse edge cases:
+- Short tips (293 chars) → expanded appropriately.
+- Code tutorials (764 chars) → extracted key lessons.
+- List posts (2084 chars) → condensed intelligently.
+100% success rate, with zero retries needed in production.
+
+10/ How simple is it to use?
+`content-repurposer create my-latest-blog-post.md`
+60 seconds later, you have 5 platform-ready posts. That's it. Your content workflow is instantly streamlined.
+
+11/ Pricing is designed for accessibility:
+- Free: 5 repurposings/month (no credit card needed). This leverages Gemini's free API quota.
+- Pro: $29/month for unlimited use.
+Experience truly efficient and quality-focused content creation.
+
+12/ What's next? While a web UI is planned, the CLI shipped first. Developers need solutions now, and I believe in shipping fast, then iterating based on real-world usage and feedback.
+
+13/ Stop wasting precious hours on manual content repurposing. Unlock more time for strategic creation, not repetitive rewriting.
+
+Content Repurposer delivers high-quality, platform-specific content at unprecedented speed.
+
+Try the Free tier and transform your content workflow today: [Link to tool/repo]

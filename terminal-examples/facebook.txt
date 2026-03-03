@@ -1,0 +1,16 @@
+# Content Repurposer Output
+Format: facebook
+Quality Score: 10/10
+Tone: professional
+Model: gemini-2.5-flash
+Generated: 2026-03-03T13:36:13.916Z
+
+---
+
+Ever feel like you're stuck in a content creation loop, rewriting the same ideas for different platforms? 😩 For years, I spent 4-5 hours *every single week* transforming my blog posts into Twitter threads, LinkedIn updates, and newsletter snippets. Same core message, but different format, tone, and length every time. It felt like tedious, repetitive work that simply shouldn't exist. Can you relate?
+
+Most "repurposing" tools promise to turn one post into a hundred, but honestly, 100 mediocre posts won't grow your audience. You need a few *great* ones. I was tired of tools sacrificing quality for quantity. So, I built Content Repurposer. It transforms a single blog post into five platform-perfect outputs in just 54 seconds on average, with an average quality score of 9.8/10. ✨
+
+Imagine getting a conversational Twitter thread, a thought leadership LinkedIn post, an expanded newsletter section, a 60-90 second video script, and an engagement-optimized Facebook post – all from one input! My tool automatically quality-scores every output, retrying anything below a 7. It handles everything from short tips to complex code tutorials, consistently delivering high-quality content. This truly changed how I create and saved me countless hours! 🤯
+
+Ready to reclaim those hours spent on manual repurposing? I'm offering a free tier where you can repurpose 5 pieces of content every month, no credit card needed. Test it out without commitment! If you're struggling with content fatigue, what's one piece of content you wish you could instantly transform for all your platforms? Let me know below! 👇

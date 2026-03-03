@@ -19,7 +19,12 @@
 - [x] HackerNews Show HN 포스트 작성 ← NEW
 
 ### Still Pending
-- [ ] 터미널 스크린샷 / GIF 제작 → 오늘 저녁 전에
+- [x] 터미널 데모 텍스트 파일 생성 (`terminal-examples/`) ← DONE 22:30 KST
+  - `cli-session-demo.txt` — 실제 CLI 실행 출력 (63.8s, 9.6/10)
+  - `before-after-comparison.txt` — 비교 다이어그램
+  - `twitter.txt`, `linkedin.txt`, `newsletter.txt`, `tiktok.txt`, `facebook.txt`
+  - 실제 blog post 입력으로 생성한 실사 출력물
+- [ ] 실제 터미널 PNG 스크린샷 (D-4 작업: `carbon-now-cli` 또는 터미널 캡처)
 
 ---
 

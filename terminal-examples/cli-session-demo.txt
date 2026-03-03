@@ -1,0 +1,33 @@
+$ content-repurposer blog-post.md --formats all
+
+🔄 Content Repurposer v1.0.0
+
+📄 Reading: blog-post.md
+✅ Parsed: 1,886 characters
+
+🎯 Generating 5 formats: twitter, linkedin, newsletter, tiktok, facebook
+   Tone: professional | Quality threshold: 7/10 | Model: gemini-flash
+
+  → Generating twitter...
+  → Generating linkedin...
+  → Generating newsletter...
+  → Generating tiktok...
+  → Generating facebook...
+
+✅ Generated 5 formats in 63.8s
+
+
+🎉 Done! Outputs saved to: ./repurposed/
+
+Format summary:
+  • twitter:     2730 chars  (quality: 9/10)  ✓
+  • linkedin:    3059 chars  (quality: 10/10) ✓
+  • newsletter:  2745 chars  (quality: 10/10) ✓
+  • tiktok:      3094 chars  (quality: 9/10)  ✓
+  • facebook:    1605 chars  (quality: 10/10) ✓
+
+Average quality: 9.6/10
+
+───────────────────────────────────────────────
+ Total: 5 formats | 63.8s | ~$0.003 per run
+───────────────────────────────────────────────

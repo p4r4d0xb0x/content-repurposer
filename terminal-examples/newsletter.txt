@@ -1,0 +1,45 @@
+# Content Repurposer Output
+Format: newsletter
+Quality Score: 10/10
+Tone: professional
+Model: gemini-2.5-flash
+Generated: 2026-03-03T13:36:13.915Z
+
+---
+
+**Tired of the Content Repurposing Grind?**
+
+Every content creator faces the same challenge: you've crafted a brilliant blog post, but then the real work begins. Rewriting that same message for Twitter, LinkedIn, newsletters, and more can steal 4-5 hours from your week. It's repetitive, inefficient, and frankly, unnecessary work that drains your creative energy.
+
+**The Problem with Current Solutions**
+
+Many tools promise to transform one piece of content into a hundred. But quantity rarely equals quality. Generating a flood of mediocre posts won't build your audience; a few truly great ones will. Meanwhile, high-quality tools often come with enterprise price tags, offering features most creators don't need at $119/month. There had to be a better way to achieve quality at scale without breaking the bank or your spirit.
+
+**Introducing: Content Repurposer**
+
+I set out to solve this problem, and the result is Content Repurposer – a command-line interface (CLI) tool designed to revolutionize your workflow. In just 7 days, I built a system that takes one blog post and transforms it into five platform-perfect outputs, ready to publish:
+
+*   **Twitter Thread:** Engaging and conversational, with built-in hooks and calls to action.
+*   **LinkedIn Post:** Professional thought leadership, 300-500 words for maximum impact.
+*   **Newsletter Section:** Expanded depth, formatted for scannability and reader engagement.
+*   **TikTok/Reels Script:** A dynamic 60-90 second video script, tailored for short-form video.
+*   **Facebook Post:** Casual and optimized for community engagement.
+
+The average turnaround time? A mere 54 seconds, consistently delivering a quality score of 9.8/10.
+
+**Quality is Non-Negotiable**
+
+Unlike other tools, Content Repurposer prioritizes quality above all else. Every output is automatically quality-scored by AI. If a result falls below a 7/10, the system automatically retries, ensuring you never get a "garbage" output. This robust system has been rigorously tested across various content types – from short tips to complex code tutorials – with a 100% success rate.
+
+**Ready to Transform Your Content Workflow?**
+
+Getting started is simple. A single command is all it takes to generate your 5 platform-ready posts in less than a minute.
+
+We believe everyone should have access to high-quality repurposing. That’s why we offer:
+
+*   **Free Tier:** Enjoy 5 repurposings per month, no credit card required.
+*   **Pro Tier:** Unlimited repurposings for just $29/month.
+
+We're already building a user-friendly web interface, but the CLI is available now for those who value speed and efficiency. Stop spending hours on repetitive tasks. Start focusing on creation.
+
+**Try Content Repurposer for Free Today!**

@@ -1,0 +1,67 @@
+# Content Repurposer Output
+Format: tiktok
+Quality Score: 9/10
+Tone: professional
+Model: gemini-2.5-flash
+Generated: 2026-03-03T13:36:13.916Z
+
+---
+
+Here's a TikTok/Instagram Reels script designed for 60-90 seconds:
+
+---
+
+**VIDEO TITLE IDEA:** Stop Wasting Hours Repurposing Content!
+
+**SCRIPT:**
+
+0:00 - **HOOK** [Energetic, direct to camera. Upbeat background music starts]
+Still wasting hours rewriting your content for *every single platform*?
+**PAUSE (1 sec)**
+
+0:03 - [Quickly pan across a laptop screen showing multiple open tabs: Twitter, LinkedIn, Newsletter draft]
+I used to spend 4-5 hours every single week doing the exact same thing: tweaking blog posts for Twitter, LinkedIn, newsletters. The content was identical, just different formats.
+
+0:10 - [Serious, slightly frustrated expression]
+It felt like busywork that shouldn't even exist. And here's the problem nobody talks about:
+
+0:14 - [Text overlay: "Quantity ≠ Quality"]
+Most "repurposing" tools promise 100 pieces of content from one post. But 100 mediocre posts won't grow your audience. 5 *great* ones will.
+
+0:20 - [Text overlay: "Expensive Enterprise Tools"]
+And the tools that *do* focus on quality? They charge $100+ a month for enterprise features you don't need.
+
+0:24 - [Determined look, slight nod]
+There had to be a better way. So, I built one.
+
+0:27 - [Text overlay: "Content Repurposer (CLI Tool)"]
+Meet Content Repurposer: a simple CLI tool that transforms one blog post into five *platform-perfect* outputs.
+
+0:33 - [Rapid fire visuals. Each point flashes briefly on screen with text overlay]
+*   [Image of a Twitter thread, engaging hooks visible] A conversational Twitter thread,
+*   [Image of a professional LinkedIn post] a thought leadership LinkedIn post,
+*   [Image of a scannable newsletter section] an expanded newsletter section,
+*   [Image of a Facebook post with emojis] a casual, engagement-optimized Facebook post...
+*   [Your face to camera, gesturing towards yourself] ...and yes, even a TikTok/Reels script *just like this one*!
+
+0:42 - [Pacing: FAST. Text overlay: "54 seconds. 9.8/10 Quality." Emphasize numbers]
+Average time? Just 54 seconds. Average quality score? An incredible 9.8 out of 10.
+
+0:47 - [Slightly more relaxed but confident. Text overlay: "No Garbage Outputs!"]
+That's right. Every output gets quality-scored by AI. Anything below a 7? Auto-retry. No garbage. I even tested it with super short tips and complex code tutorials – 100% success.
+
+0:55 - [Show a quick screen recording of typing the command `repurpose your-post.md` in a terminal window, then hitting enter]
+It's as simple as running one command: `repurpose your-post.md`.
+
+0:59 - [Pacing: SLIGHTLY SLOWER. Text overlay: "Free Tier Available!"]
+Want to try it? It's free for 5 repurposings a month, no credit card needed. Pro is just $29 for unlimited runs.
+
+1:05 - [Enthusiastic, forward-looking]
+The web UI is coming, but developers don't wait for UI. We ship fast, we iterate!
+
+1:09 - [Strong, confident CTA. Music swells slightly.]
+Ready to stop wasting time and start creating *quality* content efficiently?
+**CALL TO ACTION:** [Text overlay: "Link in Bio! Get Your Time Back!"]
+Find the link in my bio to Content Repurposer now! Get your time back!
+
+---
