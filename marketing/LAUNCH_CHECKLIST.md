@@ -24,10 +24,17 @@
 - [x] DEMO_RESULTS.md (test results)
 - [x] EDGE_CASE_VALIDATION.md (edge case tests)
 - [x] MARKETING_ASSETS_GUIDE.md (screenshot/GIF guide)
-- [x] SHOW_HN_POST.md ← NEW
-- [x] REDDIT_LAUNCH_POST.md ← NEW
-- [x] LAUNCH_RUNBOOK.md ← NEW
-- [x] Hotteok blog post about launch ← NEW
+- [x] SHOW_HN_POST.md
+- [x] REDDIT_LAUNCH_POST.md
+- [x] LAUNCH_RUNBOOK.md
+- [x] Hotteok blog post about launch
+- [x] DEVTO_LAUNCH_ARTICLE.md ← NEW (D-5)
+- [x] terminal-examples/cli-output-all-formats.txt ← NEW (D-5, real run: 54.5s, 9.6/10 avg)
+
+### Infrastructure
+- [x] waitlist-worker/ — Cloudflare Worker for email collection ← NEW (D-5)
+  - KV-backed storage, duplicate check, position tracking, admin export
+  - Deploy: `cd waitlist-worker && wrangler deploy`
 
 ### Website
 - [x] Landing page (landing/index.html) - built
@@ -148,4 +155,4 @@ Or use existing terminal-examples/cli-output-*.txt files to create static screen
 
 ---
 
-_Updated: 2026-03-03 by 호떡 🥞_
+_Updated: 2026-03-03 21:10 KST by 호떡 🥞 (autonomous loop)_
