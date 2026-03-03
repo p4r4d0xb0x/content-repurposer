@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Repurposer – Turn 1 Blog Post into 5 Platform-Ready Posts in 60s</title>
+  <meta name="description" content="AI-powered content repurposing. Quality over quantity. Twitter, LinkedIn, Newsletter, TikTok, Facebook – all from one blog post in under 60 seconds.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #6C47FF;
+      --primary-dark: #5035D8;
+      --accent: #00D4AA;
+      --bg: #0D0D14;
+      --bg-card: #16161F;
+      --bg-card2: #1E1E2C;
+      --text: #F4F4F8;
+      --text-muted: #8888A8;
+      --border: #2A2A40;
+      --success: #00D4AA;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(13, 13, 20, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--primary-dark); }
+
+    /* HERO */
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(108, 71, 255, 0.15);
+      border: 1px solid rgba(108, 71, 255, 0.4);
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: #A98BFF;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: "⚡"; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.85rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.85rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--primary); background: rgba(108,71,255,0.08); }
+
+    /* STATS ROW */
+    .stats {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* DEMO SECTION */
+    .demo {
+      max-width: 900px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .demo-flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 640px) {
+      .demo-flow { grid-template-columns: 1fr; }
+      .demo-arrow { transform: rotate(90deg); }
+    }
+    .demo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .demo-card-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .demo-card-content {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .demo-arrow {
+      font-size: 1.5rem;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .outputs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .output-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .output-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .output-platform {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .platform-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .platform-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .platform-detail {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .output-preview {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      border-left: 2px solid var(--border);
+      padding-left: 0.75rem;
+    }
+    .quality-badge {
+      display: inline-block;
+      background: rgba(0, 212, 170, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+
+    /* FEATURES */
+    .features {
+      max-width: 960px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .feature-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .feature-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .feature-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* COMPARISON */
+    .comparison {
+      max-width: 760px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .compare-table {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .compare-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      background: var(--bg-card2);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .compare-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      padding: 0.75rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      align-items: center;
+    }
+    .compare-row:nth-child(odd) { background: var(--bg-card); }
+    .check { color: var(--success); font-weight: 700; }
+    .cross { color: #FF5A5A; }
+    .muted { color: var(--text-muted); font-size: 0.85rem; }
+    .highlight-col { color: var(--accent); font-weight: 700; }
+
+    /* PRICING */
+    .pricing {
+      max-width: 760px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .plan-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+    }
+    .plan-card.featured {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, rgba(108,71,255,0.08) 0%, var(--bg-card) 100%);
+    }
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .plan-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .plan-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+    .plan-price small {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .plan-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .plan-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    .plan-features li {
+      font-size: 0.9rem;
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .plan-features li::before { content: "✓"; color: var(--success); font-weight: 700; }
+    .plan-btn {
+      display: block;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .plan-btn-free {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .plan-btn-free:hover { border-color: var(--primary); }
+    .plan-btn-pro {
+      background: var(--primary);
+      color: #fff;
+      border: 1px solid transparent;
+    }
+    .plan-btn-pro:hover { background: var(--primary-dark); }
+
+    /* CTA */
+    .cta-section {
+      max-width: 640px;
+      margin: 0 auto 5rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(108,71,255,0.1) 0%, rgba(0,212,170,0.08) 100%);
+      border: 1px solid rgba(108,71,255,0.3);
+      border-radius: 16px;
+    }
+    .cta-section h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .cta-section p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* TERMINAL DEMO */
+    .terminal {
+      background: #0A0A12;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 2rem auto;
+      max-width: 700px;
+    }
+    .terminal-bar {
+      background: var(--bg-card2);
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .terminal-body {
+      padding: 1.25rem 1.5rem;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+    .t-cmd { color: #A98BFF; }
+    .t-ok { color: var(--accent); }
+    .t-info { color: #6888FF; }
+    .t-muted { color: #555578; }
+    .t-score { color: #FFD700; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Content<span>Repurposer</span></a>
+    <a href="#pricing" class="nav-cta">Get Started Free</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Launching on ProductHunt — March 8th</div>
+    <h1>Turn <em>1 blog post</em> into<br>5 platform-ready posts<br>in 60 seconds</h1>
+    <p class="hero-sub">
+      Not 100 mediocre posts. 5 great ones. Twitter threads, LinkedIn posts, newsletters, TikTok scripts, and Facebook posts — all from one input, all publish-ready.
+    </p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn-primary">Start Free — 5/month</a>
+      <a href="#demo" class="btn-secondary">See it in action</a>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">9.8/10</div>
+        <div class="stat-label">avg quality score</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">~54s</div>
+        <div class="stat-label">all 5 formats</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">success rate</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">18+</div>
+        <div class="stat-label">test cases passed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINAL DEMO -->
+  <section id="demo" class="demo">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">One command. Five outputs. Done.</h2>
+    <p class="section-sub">Paste your blog post. Let the AI do the formatting. Review and publish.</p>
+
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot" style="background:#FF5F57"></div>
+        <div class="terminal-dot" style="background:#FFBD2E"></div>
+        <div class="terminal-dot" style="background:#28CA41"></div>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-muted">$</span> <span class="t-cmd">npx content-repurposer my-blog-post.md --formats all</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-info">📄 Loaded:</span> my-blog-post.md (1,847 words)</div>
+        <div><span class="t-info">🤖 Generating</span> 5 platform-optimized outputs...</div>
+        <div>&nbsp;</div>
+        <div><span class="t-ok">✓</span> Twitter thread   <span class="t-score">10.0/10</span> <span class="t-muted">(12 tweets, 2,189 chars)</span></div>
+        <div><span class="t-ok">✓</span> LinkedIn post    <span class="t-score">10.0/10</span> <span class="t-muted">(professional, 3,134 chars)</span></div>
+        <div><span class="t-ok">✓</span> Newsletter       <span class="t-score">10.0/10</span> <span class="t-muted">(scannable, with CTA)</span></div>
+        <div><span class="t-ok">✓</span> TikTok script    <span class="t-score"> 9.0/10</span> <span class="t-muted">(90s, visual cues)</span></div>
+        <div><span class="t-ok">✓</span> Facebook post    <span class="t-score">10.0/10</span> <span class="t-muted">(conversational, 284 chars)</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-ok">🎉 Complete!</span> 5/5 outputs saved to <span class="t-cmd">./output/</span></div>
+        <div><span class="t-info">⏱  Time: 53.4 seconds</span> | <span class="t-score">Avg quality: 9.8/10</span></div>
+      </div>
+    </div>
+
+    <div class="outputs-grid">
+      <div class="output-card">
+        <div class="output-platform">
+          <div class="platform-icon" style="background:rgba(29,161,242,0.15)">🐦</div>
+          <div>
+            <div class="platform-name">Twitter Thread</div>
+            <div class="platform-detail">8–15 tweets · hooks · storytelling</div>
+          </div>
+        </div>
+        <div class="output-preview">
+          1/ Most AI content tools promise "100 posts from 1 blog." Here's what actually happens: you get 100 mediocre posts and spend 3 hours editing 5 of them...
+        </div>
+        <span class="quality-badge">10/10</span>
+      </div>
+      <div class="output-card">
+        <div class="output-platform">
+          <div class="platform-icon" style="background:rgba(0,119,181,0.15)">💼</div>
+          <div>
+            <div class="platform-name">LinkedIn Post</div>
+            <div class="platform-detail">1,100–1,300 chars · professional</div>
+          </div>
+        </div>
+        <div class="output-preview">
+          The content creation paradox: we spend more time repurposing than creating. I analyzed 50 posts and found that 72% of creator time goes to adapting content...
+        </div>
+        <span class="quality-badge">10/10</span>
+      </div>
+      <div class="output-card">
+        <div class="output-platform">
+          <div class="platform-icon" style="background:rgba(255,165,0,0.15)">📧</div>
+          <div>
+            <div class="platform-name">Newsletter</div>
+            <div class="platform-detail">Subject · scannable · CTA</div>
+          </div>
+        </div>
+        <div class="output-preview">
+          Subject: The 60-second content system creators are using to 10x their reach<br><br>
+          Quick question: how long does it take you to turn a blog post into a Twitter thread?...
+        </div>
+        <span class="quality-badge">10/10</span>
+      </div>
+      <div class="output-card">
+        <div class="output-platform">
+          <div class="platform-icon" style="background:rgba(255,0,80,0.15)">🎵</div>
+          <div>
+            <div class="platform-name">TikTok Script</div>
+            <div class="platform-detail">30–60s · visual cues · hook in 3s</div>
+          </div>
+        </div>
+        <div class="output-preview">
+          [HOOK - 0s] "Did you know you can turn ONE blog post into FIVE platform posts in under a minute?" [PAUSE] "Here's exactly how..."
+        </div>
+        <span class="quality-badge">9/10</span>
+      </div>
+      <div class="output-card">
+        <div class="output-platform">
+          <div class="platform-icon" style="background:rgba(66,103,178,0.15)">📘</div>
+          <div>
+            <div class="platform-name">Facebook Post</div>
+            <div class="platform-detail">200–300 chars · conversational</div>
+          </div>
+        </div>
+        <div class="output-preview">
+          Spent 5 hours adapting one blog post last week. Not anymore. Found a way to get all 5 platform versions in 60 seconds flat. Anyone else doing this? 👇
+        </div>
+        <span class="quality-badge">10/10</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="section-label">Why it's different</div>
+    <h2 class="section-title">Built for quality, not quantity</h2>
+    <p class="section-sub">Every design decision is about getting you from "blog post" to "published" faster.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">Quality-first architecture</div>
+        <div class="feature-desc">Every output is scored across 5 dimensions. Below 7/10? Auto-retry. Current average: 9.8/10 — outputs you can publish without editing.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔤</div>
+        <div class="feature-title">Text-first (rare)</div>
+        <div class="feature-desc">90%+ of repurposing tools focus on video. We serve the underserved: blog posts → social media. Short tips, long-form, code-heavy — all work.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">54 seconds flat</div>
+        <div class="feature-desc">All 5 formats generated in parallel. No waiting, no queueing, no "come back in 10 minutes." From paste to publish-ready in under a minute.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📐</div>
+        <div class="feature-title">Platform-native formatting</div>
+        <div class="feature-desc">Not copy-paste. Real adaptation: Twitter gets thread structure and hooks. LinkedIn gets professional tone and hashtags. TikTok gets timing cues and visual directions.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">Works with any content</div>
+        <div class="feature-desc">Short tips (293 chars), long essays (5,000+ words), code-heavy posts, list posts, opinion pieces. 18/18 edge cases tested and passed.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <div class="feature-title">Affordable pricing</div>
+        <div class="feature-desc">$29/mo unlimited, vs competitors at $119/mo. Or use the free tier (5/month). No enterprise contracts, no 20-hour onboarding — just paste and go.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="comparison">
+    <div class="section-label">Comparison</div>
+    <h2 class="section-title">Why not just use [competitor]?</h2>
+    <p class="section-sub">Real differences that matter for solo creators and small teams.</p>
+
+    <div class="compare-table">
+      <div class="compare-header">
+        <span>Feature</span>
+        <span style="color:var(--accent)">Content Repurposer</span>
+        <span>Lately.ai / Others</span>
+      </div>
+      <div class="compare-row">
+        <span>Pricing</span>
+        <span class="highlight-col">$29/mo</span>
+        <span class="muted">$119–$399/mo</span>
+      </div>
+      <div class="compare-row">
+        <span>Setup time</span>
+        <span class="highlight-col">0 min (just paste)</span>
+        <span class="muted">20–40 hours</span>
+      </div>
+      <div class="compare-row">
+        <span>Quality score system</span>
+        <span class="check">✓</span>
+        <span class="cross">✗</span>
+      </div>
+      <div class="compare-row">
+        <span>Text-first focus</span>
+        <span class="check">✓</span>
+        <span class="muted">Video-first</span>
+      </div>
+      <div class="compare-row">
+        <span>Time per 5 formats</span>
+        <span class="highlight-col">~54 seconds</span>
+        <span class="muted">Minutes–hours</span>
+      </div>
+      <div class="compare-row">
+        <span>Auto-retry on low quality</span>
+        <span class="check">✓</span>
+        <span class="cross">✗</span>
+      </div>
+      <div class="compare-row">
+        <span>Free tier</span>
+        <span class="check">✓ (5/month)</span>
+        <span class="muted">Trial only</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="pricing">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple, transparent pricing</h2>
+    <p class="section-sub">No contracts. Cancel anytime. Start free.</p>
+
+    <div class="pricing-grid">
+      <div class="plan-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">$0<small>/mo</small></div>
+        <div class="plan-desc">Perfect for trying it out</div>
+        <ul class="plan-features">
+          <li>5 repurposings/month</li>
+          <li>All 5 output formats</li>
+          <li>Quality scoring</li>
+          <li>Standard quality (7.0+ threshold)</li>
+        </ul>
+        <a href="#" class="plan-btn plan-btn-free">Get Started Free</a>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$29<small>/mo</small></div>
+        <div class="plan-desc">For active content creators</div>
+        <ul class="plan-features">
+          <li>Unlimited repurposings</li>
+          <li>All 5 output formats</li>
+          <li>High quality (9.0+ threshold)</li>
+          <li>Priority processing</li>
+          <li>Tone customization</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#" class="plan-btn plan-btn-pro">Start Pro Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="max-width:960px; margin:0 auto; padding:0 2rem 5rem;">
+    <div class="cta-section">
+      <h2>Stop spending hours on repurposing.<br>Start in 60 seconds.</h2>
+      <p>Free tier available. No credit card required.</p>
+      <a href="#pricing" class="btn-primary">Get Started Free</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Content Repurposer · Built by <a href="https://ql.gl" style="color:var(--primary);text-decoration:none;">호떡 🥞</a> · Launching March 8, 2026 on ProductHunt</p>
+    <p style="margin-top:0.5rem">Questions? hello@contentrepurposer.com</p>
+  </footer>
+
+</body>
+</html>
