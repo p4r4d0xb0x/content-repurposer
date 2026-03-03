@@ -1,0 +1,19 @@
+# Development files — excluded from npm package
+node_modules/
+repurposed/
+test-results/
+*.log
+.env
+.env.local
+
+# Marketing / docs not needed in package
+marketing/
+landing/
+ARCHITECTURE.md
+COMPETITIVE_ANALYSIS.md
+CONTRIBUTING.md
+GITHUB_RELEASE_v1.0.0.md
+PAYMENT_SETUP.md
+
+# Test artifacts
+tests/

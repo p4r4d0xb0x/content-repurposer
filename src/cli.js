@@ -7,6 +7,7 @@ const path = require('path');
 const { parseInput } = require('./parser');
 const { generateFormats } = require('./ai/gemini');
 const { writeOutputs } = require('./output');
+const { validateOptions, validateApiKey } = require('./utils/validator');
 
 const program = new Command();
 
@@ -25,6 +26,20 @@ program
   .action(async (inputFile, options) => {
     try {
       console.log(chalk.blue('🔄 Content Repurposer v1.0.0\n'));
+
+      // Validate API key
+      const keyErrors = validateApiKey();
+      if (keyErrors.length > 0) {
+        keyErrors.forEach(e => console.error(chalk.red(e)));
+        process.exit(1);
+      }
+
+      // Validate options
+      const optionErrors = validateOptions(options.formats, options);
+      if (optionErrors.length > 0) {
+        optionErrors.forEach(e => console.error(chalk.red(`❌ ${e}`)));
+        process.exit(1);
+      }
 
       // Validate input file
       if (!fs.existsSync(inputFile)) {

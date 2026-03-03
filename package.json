@@ -1,15 +1,52 @@
 {
   "name": "content-repurposer",
   "version": "1.0.0",
-  "description": "**Status:** MVP Development (Week 1)   **Created:** 2026-03-01 06:00 KST   **Target Launch:** 2026-03-08 (Monday)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "AI-powered CLI to turn one blog post into 5 platform-ready posts in ~60 seconds. Quality scoring built-in.",
+  "main": "src/cli.js",
+  "bin": {
+    "content-repurposer": "./src/cli.js",
+    "repurpose": "./src/cli.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node src/cli.js examples/test-short.md -f twitter linkedin --output ./test-output"
+  },
+  "keywords": [
+    "ai",
+    "content-repurposing",
+    "cli",
+    "twitter",
+    "linkedin",
+    "newsletter",
+    "tiktok",
+    "facebook",
+    "content-marketing",
+    "gemini",
+    "micro-saas",
+    "developer-tools",
+    "blog",
+    "social-media"
+  ],
+  "author": "도균 <p4r4d0xb0x@github.com>",
+  "license": "MIT",
   "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/p4r4d0xb0x/content-repurposer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/p4r4d0xb0x/content-repurposer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/p4r4d0xb0x/content-repurposer/issues"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "chalk": "^4.1.2",
