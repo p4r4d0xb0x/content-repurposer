@@ -20,6 +20,7 @@
 
 ### Marketing Content
 - [x] PRODUCTHUNT_CONTENT.md (full PH page draft)
+- [x] PRESS_KIT.md (media summary, assets, links) ← NEW (D-3)
 - [x] LAUNCH_TWEETS.md (launch day tweets)
 - [x] DEMO_RESULTS.md (test results)
 - [x] EDGE_CASE_VALIDATION.md (edge case tests)
