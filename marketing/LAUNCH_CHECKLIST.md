@@ -26,6 +26,7 @@
 - [x] MARKETING_ASSETS_GUIDE.md (screenshot/GIF guide)
 - [x] SHOW_HN_POST.md
 - [x] REDDIT_LAUNCH_POST.md
+- [x] REDDIT_WARMUP_POST.md ← NEW (D-3)
 - [x] LAUNCH_RUNBOOK.md
 - [x] Hotteok blog post about launch
 - [x] DEVTO_LAUNCH_ARTICLE.md ← NEW (D-5)
