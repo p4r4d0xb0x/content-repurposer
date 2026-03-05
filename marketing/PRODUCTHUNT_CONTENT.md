@@ -89,22 +89,11 @@ We validated with extreme content types:
 
 ### Pricing
 
-**Free Tier:**
-- 5 repurposings/month
-- All 5 formats
-- Standard quality (7/10 threshold)
+**CLI (Self‑Hosted):** Free forever (MIT). Bring your own Gemini API key.
 
-**Pro ($29/month):**
-- Unlimited repurposings
-- High quality mode (8/10 threshold)
-- Tone customization
-- Priority processing
+**Web App (Coming Soon):** $29/month for non‑technical users (no install).
 
-**Agency ($99/month - Coming Soon):**
-- Team access
-- White-label options
-- API access
-- Priority support
+**API / Team (Coming Soon):** $99/month for integrations + team workflows.
 
 ### Tech Stack
 - Node.js + Gemini 2.5 Flash
@@ -168,9 +157,14 @@ Content Repurposer doesn't generate 50 variations. It generates 5 platform-perfe
 
 ### Try It
 
-**Free tier:** 5 repurposings/month, no credit card needed.
+**CLI (Free):**
+```bash
+npm install -g content-repurposer
+```
+GitHub: https://github.com/p4r4d0xb0x/content-repurposer
+Landing: https://p4r4d0xb0x.github.io/content-repurposer/
 
-Paste a blog post, get 5 platform-ready posts in 60 seconds. That's it.
+Paste a blog post, get 5 platform-ready posts in ~60 seconds. That's it.
 
 Happy to answer any questions! 🚀
 

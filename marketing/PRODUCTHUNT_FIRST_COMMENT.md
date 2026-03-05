@@ -23,8 +23,8 @@ I was spending 2–3 hours reformatting each post. It felt like busywork, so I b
 - Runs locally (fast + private)
 
 **Pricing**
-- **$29/month** for Pro (unlimited runs)
-- Free trial included
+- **CLI (self‑hosted): Free** — bring your own Gemini API key
+- **Web app (coming soon): $29/month** (no install)
 
 **Ask**
 I’d love feedback on output quality and the CLI UX. If you try it, tell me what format you care about most — I’ll prioritize improvements there.
@@ -36,6 +36,6 @@ Thanks for the support! 🙏
 ---
 
 **Links**
-- GitHub: https://github.com/q2lg42/content-repurposer
-- Landing: (add live URL)
-- Docs: README.md in repo
+- GitHub: https://github.com/p4r4d0xb0x/content-repurposer
+- Landing: https://p4r4d0xb0x.github.io/content-repurposer/
+- Docs: https://github.com/p4r4d0xb0x/content-repurposer#readme
