@@ -180,10 +180,12 @@ Happy to answer any questions! 🚀
 
 - [x] Terminal output examples ✅ (created)
 - [x] CLI demo text ✅ (created)
-- [ ] Screenshots ⚠️ (pending)
+- [x] Screenshots ✅ (generated)
   - CLI in action (colored output)
   - Before/after comparison
-  - 5 output files side-by-side
+  - Twitter output
+  - Quality scores
+- [x] PRODUCTHUNT_GALLERY_CAPTIONS.md (캡션 + 순서 가이드)
 - [ ] Demo GIF ⚠️ (pending)
   - 60-second walkthrough
   - Input → processing → 5 outputs

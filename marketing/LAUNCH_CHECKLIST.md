@@ -1,7 +1,7 @@
 # Launch Checklist - Content Repurposer
 
 **Launch Date:** March 8th, 2026 (Monday, 06:00 KST)
-**Status:** 🟡 D-5
+**Status:** 🟡 D-3
 
 ---
 
@@ -37,6 +37,7 @@
   - 실제 5개 포맷 출력물 (twitter/linkedin/newsletter/tiktok/facebook.txt)
   - 입력: demo-content-repurposer.md (Content Repurposer 소개 포스트)
 - [x] README.md ⚡ Live Demo 섹션 + 실제 출력 예시 추가 ← NEW (D-5 22:30 KST)
+- [x] PRODUCTHUNT_GALLERY_CAPTIONS.md (스크린샷 캡션/순서 가이드) ← NEW (D-3)
 
 ### Infrastructure
 - [x] waitlist-worker/ — Cloudflare Worker for email collection ← NEW (D-5)
