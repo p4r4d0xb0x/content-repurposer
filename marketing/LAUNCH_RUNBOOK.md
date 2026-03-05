@@ -13,24 +13,23 @@
   - Tagline: "AI-powered content repurposing: quality over quantity" (52 chars)
   - Upload screenshots (CLI output + quality scores)
   - Add first comment (founder comment template below)
-  - Set schedule: March 8th, 00:01 UTC
+  - Set schedule: **March 7th, 21:00 UTC (March 8 06:00 KST)**
 - [ ] **14:00** - Preview link ready → share to beta users for pre-voting
 - [ ] **20:00** - Rest. Sleep early.
-- [ ] **21:00** - ProductHunt launches (00:01 UTC = 09:01 KST March 8)
 
 ### March 8th (일요일) - LAUNCH DAY
 
-**Morning Sprint (09:00-12:00 KST)**
-- [ ] **09:00** - Wake up, check ProductHunt page is live
-- [ ] **09:05** - Post Show HN (see SHOW_HN_POST.md)
+**Morning Sprint (06:00-12:00 KST)**
+- [ ] **06:00** - Wake up, check ProductHunt page is live
+- [ ] **06:05** - Post Show HN (see SHOW_HN_POST.md)
   - Title: "Show HN: Content Repurposer – 1 blog post → 5 platform-ready posts in 60s"
-  - Post at HN peak: 09:00-11:00 KST (00:00-02:00 UTC)
-- [ ] **09:10** - Post to r/indiehackers (see REDDIT_LAUNCH_POST.md)
-- [ ] **09:15** - Post launch tweet (Version 1: Quality-Focused, see LAUNCH_TWEETS.md)
-- [ ] **09:20** - Post to LinkedIn
-- [ ] **09:30** - Post to r/SideProject
-- [ ] **09:45** - Notify friends/network to upvote ProductHunt
-- [ ] **10:00** - Reply to any early comments on HN/Reddit/PH
+  - Post at HN peak: 06:00-08:00 KST (21:00-23:00 UTC)
+- [ ] **06:10** - Post to r/indiehackers (see REDDIT_LAUNCH_POST.md)
+- [ ] **06:15** - Post launch tweet (Version 1: Quality-Focused, see LAUNCH_TWEETS.md)
+- [ ] **06:20** - Post to LinkedIn
+- [ ] **06:30** - Post to r/SideProject
+- [ ] **06:45** - Notify friends/network to upvote ProductHunt
+- [ ] **07:00** - Reply to any early comments on HN/Reddit/PH
 
 **Midday Monitor (12:00-18:00 KST)**
 - [ ] Reply to ALL comments on ProductHunt (within 1 hour)
