@@ -87,19 +87,19 @@ Terminal screenshots for ProductHunt gallery:
 
 1. **CLI Running** - `node src/cli.js examples/test-short.md --formats all`
    - Capture: full terminal with progress indicators
-   - Save as: marketing/screenshots/cli-running.png
+   - Save as: marketing/screenshots/cli-running.png ✅ (generated)
 
 2. **Quality Scores** - output showing "✅ 9.8/10" scores
    - Capture: format summary at end
-   - Save as: marketing/screenshots/quality-scores.png
+   - Save as: marketing/screenshots/quality-scores.png ✅ (generated)
 
 3. **Twitter Output** - first 10 tweets of thread
    - Capture: repurposed/twitter.txt
-   - Save as: marketing/screenshots/twitter-output.png
+   - Save as: marketing/screenshots/twitter-output.png ✅ (generated)
 
 4. **Before/After** - side by side (input vs output)
    - Use a split-screen tool
-   - Save as: marketing/screenshots/before-after.png
+   - Save as: marketing/screenshots/before-after.png ✅ (generated)
 
 **Tool for terminal screenshots:**
 ```bash
